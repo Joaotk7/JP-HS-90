@@ -1,0 +1,104 @@
+/* === Geral === */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0A0F1C;
+  color: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+/* === Containers === */
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #1A2332;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
+}
+
+/* === Neon Text === */
+.neon {
+  color: #00D9FF;
+  text-shadow:
+    0 0 5px #00D9FF,
+    0 0 10px #00D9FF,
+    0 0 20px #00D9FF,
+    0 0 40px #00D9FF;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* === Botões === */
+button {
+  padding: 12px 25px;
+  margin: 5px 0;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #000;
+  background: linear-gradient(45deg, #00D9FF, #FF6B00);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  filter: brightness(1.2);
+}
+
+/* === Inputs === */
+input[type=text] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #1A2332;
+  color: #fff;
+  margin: 5px 0 10px 0;
+}
+
+/* === Código Ativo === */
+.active-code {
+  color: #FF6B00;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* === Funções Ativas === */
+.function-list {
+  margin-top: 10px;
+}
+
+.function-list span {
+  display: block;
+  margin: 3px 0;
+  color: #00D9FF;
+  text-shadow: 0 0 5px #00D9FF;
+}
+
+/* === Modos de Precisão === */
+.precision-btn {
+  flex: 1;
+  margin-right: 5px;
+  background-color: #2A3441;
+  color: #B0BEC5;
+}
+
+.precision-btn.active {
+  background-color: #00D9FF;
+  color: #000;
+}
+
+/* === Responsivo === */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+  button {
+    font-size: 14px;
+  }
+}

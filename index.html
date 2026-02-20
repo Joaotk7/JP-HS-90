@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JP HS 100%</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- === Tela de Login === -->
+  <div id="loginScreen" class="container">
+    <h1 class="neon">JP HS 100%</h1>
+    <input type="text" id="username" placeholder="Usuário">
+    <input type="password" id="password" placeholder="Senha">
+    <button onclick="login()">Entrar</button>
+    <p id="loginMsg" style="color:#FF6B00; margin-top:10px;"></p>
+  </div>
+
+  <!-- === Painel === -->
+  <div id="panelScreen" class="container" style="display:none;">
+    <h1 class="neon">Painel JP HS</h1>
+
+    <!-- Código gerado automaticamente -->
+    <div>
+      <p class="neon">Código HS Automático:</p>
+      <p id="generatedCode" class="neon" style="font-size:18px;"></p>
+      <p id="lastUpdate" style="color:#B0BEC5;"></p>
+    </div>
+
+    <!-- Colar código e ativar -->
+    <div style="margin-top:15px;">
+      <p class="neon">Cole seu código HS:</p>
+      <input type="text" id="codeInput" placeholder="Cole aqui">
+      <div style="display:flex; gap:10px; margin-top:5px;">
+        <button onclick="chooseCode(document.getElementById('codeInput').value)">ESCOLHER</button>
+        <button onclick="activateCode()">ATIVAR</button>
+      </div>
+      <p id="activeCode" class="active-code"></p>
+    </div>
+
+    <!-- Modos de Precisão -->
+    <div style="margin-top:15px;">
+      <p class="neon">Modos de Precisão:</p>
+      <div style="display:flex; gap:5px;">
+        <button class="precision-btn" data-mode="Rápido" onclick="changePrecisionMode('Rápido')">Rápido</button>
+        <button class="precision-btn" data-mode="Médio" onclick="changePrecisionMode('Médio')">Médio</button>
+        <button class="precision-btn" data-mode="Baixo" onclick="changePrecisionMode('Baixo')">Baixo</button>
+      </div>
+    </div>
+
+    <!-- Funções Ativas -->
+    <div style="margin-top:15px;">
+      <p class="neon">Funções Ativas:</p>
+      <div id="functionList" class="function-list"></div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+  <script>
+    // === Login simples ===
+    function login() {
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+      const msg = document.getElementById('loginMsg');
+
+      if(user === 'jp' && pass === 'xiter') {
+        document.getElementById('loginScreen').style.display = 'none';
+        document.getElementById('panelScreen').style.display = 'block';
+      } else {
+        msg.innerText = 'Usuário ou senha incorretos!';
+      }
+    }
+  </script>
+</body>
+</html>
